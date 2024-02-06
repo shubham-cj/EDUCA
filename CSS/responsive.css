@@ -1,0 +1,200 @@
+:root {
+    --color-primary: #6c63ff;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    --color-bg: #1f2641;
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+
+
+/* ================= MEDIA QUERIES (TABLET) ================= */
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+        height: auto;
+        margin-bottom: 4rem;
+    }
+    .header__container {
+        gap: 2rem;
+        padding-bottom: 3rem;
+    }
+    
+    /* ================= CATEGORIES ================= */
+    .categories {
+        height: auto;
+    }
+    .categories__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .categories__left {
+        margin-right: 0;
+    }
+
+    /* ================= POPULAR COURSES ================= */
+    .cources {
+        margin-top: 0;
+    }
+    .cources__container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ================= FAQs ================= */
+    .faqs__container {
+        grid-template-columns: 1fr;
+    }
+    .faq {
+        padding: 1rem;
+    }
+
+    /* ================= FOOTER ================= */
+    .footer__container {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .footer__1 {
+        grid-column: span 3;
+    }
+}
+
+
+/* ================= MEDIA QUERIES (MOBILE) ================= */
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    /* ================= NAVBAR ================= */
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+    nav button#closeMenuBtn {
+        display: none;
+    }
+    .nav__menu {
+        position: fixed;
+        top: 5rem;
+        right: 3%;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+    .nav__menu li {
+        width: 100%;
+        height: 5.8rem;
+    } 
+    .nav__menu li a {
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .nav__menu li a:hover {
+        background: var(--color-bg2);
+        color: var(--color-white);
+    }
+
+    /* ================= HEADER ================= */
+    .header__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .header__right-image {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* ================= CATEGORIES ================= */
+    section {
+        padding: 3rem 0;
+    }
+    .categories__right {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .category {
+        padding: 1.2rem;
+        padding-top: 1.6rem;
+        border-radius: 1rem;
+    }
+    
+    /* ================= POPULAR COURSES ================= */
+    .cources__container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* ================= TESTIMONIALS ================= */
+    .testimonial__body {
+        padding: 1rem;
+    }
+    
+    /* ================= FOOTER ================= */
+    .footer__1 {
+        grid-column: 1;
+    }
+    .footer__container {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1rem;
+        column-gap: 3rem;
+    }
+    .footer {
+        padding-top: 3rem;
+    }
+    .footer__copyright {
+        margin-top: 2rem;
+    }
+}
+
+/* ================= MEDIA QUERIES (VERY SMALL DEVICES) ================= */
+@media screen and (max-width: 450px) {
+
+    /* ================= CATEGORIES ================= */
+    .categories__right {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    /* ================= FOOTER ================= */
+    .footer__container {
+        column-gap: 2rem;
+    }
+}
