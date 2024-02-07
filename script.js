@@ -36,8 +36,8 @@ closeBtn.addEventListener("click", () => {
     menuBtn.style.display = "block";
     closeBtn.style.display = "none";
 })
-window.onscroll = () => {
-    menu.style.display = "none";
-    menuBtn.style.display = "block";
-    closeBtn.style.display = "none";
-}
+// window.onscroll = () => {
+//     menu.style.display = "none";
+//     menuBtn.style.display = "block";
+//     closeBtn.style.display = "none";
+// }
